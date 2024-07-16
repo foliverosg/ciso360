@@ -21,7 +21,7 @@ services:
       - PROTOCOL_HEADER=x-forwarded-proto
       - HOST_HEADER=x-forwarded-host
 
-    image: ghcr.io/intuitem/ciso-assistant-community/frontend:latest
+    image: ghcr.io/foliverosg/ciso360/frontend:latest
     depends_on:
       - backend
 
