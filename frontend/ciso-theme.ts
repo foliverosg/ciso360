@@ -28,9 +28,9 @@ export const cisoTheme: CustomThemeConfig = {
 		'--color-primary-400': '132 126 237', // #847eed
 		'--color-primary-500': '79 70 229', // #4F46E5
 		'--color-primary-600': '71 63 206', // #473fce
-		'--color-primary-700': '59 53 172', // #3b35ac
-		'--color-primary-800': '47 42 137', // #2f2a89
-		'--color-primary-900': '39 34 112', // #272270
+		'--color-primary-700': '58 53 172', // #3a32c1
+		'--color-primary-800': '58 50 192', // #3a32c1
+		'--color-primary-900': '50 40 186', // #3228ba
 		// secondary | #2563eb
 		'--color-secondary-50': '222 232 252', // #dee8fc
 		'--color-secondary-100': '211 224 251', // #d3e0fb
