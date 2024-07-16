@@ -3,7 +3,7 @@ version: "3.9"
 services:
   backend:
     container_name: backend
-    image: ghcr.io/foliverosg/ciso360/backend:latest
+    image: ghcr.io/intuitem/ciso-assistant-community/backend:latest:latest
     restart: always
     environment:
       - ALLOWED_HOSTS=backend,cool-vm
@@ -21,7 +21,7 @@ services:
       - PROTOCOL_HEADER=x-forwarded-proto
       - HOST_HEADER=x-forwarded-host
 
-    image: ghcr.io/foliverosg/ciso360/frontend:latest
+    image: ghcr.io/intuitem/ciso-assistant-community/frontend:latest
     depends_on:
       - backend
 
