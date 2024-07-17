@@ -1,0 +1,147 @@
+urn: urn:intuitem:risk:library:my-custom-framework
+locale: en
+ref_id: MY-CUSTOM-FRAMEWORK
+name: My Custom Framework
+description: some description
+copyright: copyright mentions
+version: 1
+provider: framework author
+packager: framework packager
+objects:
+  framework:
+    urn: urn:intuitem:risk:framework:my-custom-framework
+    ref_id: MY-CUSTOM-FRAMEWORK
+    name: My Custom Framework
+    description: some description
+    min_score: 1
+    max_score: 5
+    scores_definition:
+    - score: 1
+      name: Initial
+      description: 'No Process documentation or not formally approved by management.
+
+        Standard process does not exist.'
+    - score: 2
+      name: Repeatable
+      description: 'Formally approved Process documentation exists but not reviewed
+        in the previous 2 years.
+
+        Ad-hoc process exists and is done informally.'
+    - score: 3
+      name: Defined
+      description: 'Formally approved Process documentation exists, and exceptions
+        are documented and approved. Documented & approved exceptions < 5% of the
+        time.
+
+        Formal process exists and is implemented. Evidence available for most activities.
+        Less than 10% process exceptions.'
+    - score: 4
+      name: Managed
+      description: 'Formally approved Process documentation exists, and exceptions
+        are documented and approved. Documented & approved exceptions < 3% of the
+        time.
+
+        Formal process exists and is implemented. Evidence available for all activities.
+        Detailed metrics of the process are captured and reported.
+
+        Minimal target for metrics has been established. Less than 5% of process exceptions.'
+    - score: 5
+      name: Optimizing
+      description: 'Formally approved Process documentation exists, and exceptions
+        are documented and approved. Documented & approved exceptions < 0,5% of the
+        time.
+
+        Formal process exists and is implemented. Evidence available for all activities.
+        Detailed metrics of the process are captured and reported.
+
+        Minimal target for metrics has been established and continually improving.
+        Less than 1% of process exceptions.'
+    implementation_groups_definition:
+    - ref_id: B
+      name: Basic
+      description: null
+    - ref_id: I
+      name: Intermediate
+      description: null
+    - ref_id: A
+      name: Advanced
+      description: null
+    requirement_nodes:
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1
+      assessable: false
+      depth: 1
+      ref_id: cat1
+      name: Categroy 1
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1.sec1
+      assessable: false
+      depth: 2
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1
+      ref_id: cat1.sec1
+      name: Section 1
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:1.1.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1.sec1
+      ref_id: 1.1.1
+      name: The name of the actual requirement
+      description: Text of the requirements. Line breaks are supported
+      implementation_groups:
+      - B
+      - I
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:1.1.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1.sec1
+      ref_id: 1.1.2
+      name: The name of the actual requirement
+      description: Text of the requirements. Line breaks are supported
+      implementation_groups:
+      - B
+      - I
+      - A
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1.sec2
+      assessable: false
+      depth: 2
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1
+      ref_id: cat1.sec2
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:1.2.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1.sec2
+      ref_id: 1.2.1
+      implementation_groups:
+      - I
+      - A
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:1.2.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1.sec2
+      ref_id: 1.2.2
+      implementation_groups:
+      - E
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:1.2.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat1.sec2
+      ref_id: 1.2.3
+      implementation_groups:
+      - B
+      - I
+      - E
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:cat2
+      assessable: false
+      depth: 1
+      ref_id: cat2
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:cat2.sec1
+      assessable: false
+      depth: 2
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat2
+      ref_id: cat2.sec1
+    - urn: urn:intuitem:risk:req_node:my-custom-req_node:2.1.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:intuitem:risk:req_node:my-custom-req_node:cat2.sec1
+      ref_id: 2.1.1
+      implementation_groups:
+      - I
+      - E
